@@ -23,6 +23,6 @@ using namespace std;
          }
          return false;
        }
-void Login:: setPass(string p){
+void Login::setPass(string p){
    pass=p;
      }
