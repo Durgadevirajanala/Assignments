@@ -17,7 +17,7 @@ $(OBJ)/quick.o: $(SRC)/quick.cpp
 	mv *.o $(OBJ)
 
 valgrind:
-	valgrind --leak-check=full $(BIN)/app
+	valgrind --leak-check=full $(BIN)/quick
 	mv valgrind $(BIN)
 
 clean:
