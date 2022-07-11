@@ -1,4 +1,4 @@
-C = g++
+CC = g++
 LFLAGS = -o
 CFLAGS = -c -g -Wall -Werror
 INC = ./inc
