@@ -7,13 +7,21 @@ using namespace std;
 int main()
 {
 	int pid,n;
-
 	n=1;
-	fork();
-	{   
-		cout<<"Hello All"<<endl;
+	for(;;)
+	{
+	pid=fork();
+	if(pid>0)
+	{
+	
+		cout<<"MAX no of concurrent process are = "<<2*n<<endl;
+		cout<<"MAX no of children process are = "<<(2*n)-1<<endl;
 	}
-
-	cout<<"MAX no of concurrent process are = "<<2*n<<endl;
-    return 0;
-																													}
+	if(pid==0)
+	{
+		n++;
+		cout<<"MAX no of concurrent process are = "<<2*n<<endl;
+	}
+	return 0;
+}	
+}
