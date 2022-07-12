@@ -1,28 +1,54 @@
-#include <employee.h>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
+#include <vector>
+#include <sys/types.h>
+#include <unistd.h>
+#include <sys/wait.h>
+#include <cstring>
+#define BUF_Size 2000
+using namespace std;
 
-void Employee::display()
-{
-	cout<<"emp ID: "<<empid<<endl;
-	cout<<"name: "<<name<<endl;
-	cout<<"salary: "<<sal<<endl;
-	cout<<"role: "<<role<<endl;
-}
-string Employee:: getEid(){
-	return empid;
-}
-string Employee:: getName(){
-	return name;
-}
-int Employee:: getSal(){
-	return sal;
-}
-string Employee:: getRol(){
-	return role;
-}
-
+class Employee{
+	private:
+		string empid;
+		string name;
+		int sal;
+		string role;
+	public:
+		Employee(){}
+		Employee(string e,string n,int s,string r)
+		{
+			empid=e;
+			name=n;
+			sal=s;
+			role=r;
+		}
+		void display()
+		{
+			cout<<"emp ID: "<<empid<<endl;
+			cout<<"name: "<<name<<endl;
+			cout<<"salary: "<<sal<<endl;
+			cout<<"role: "<<role<<endl;
+		}
+		string getEid(){
+			return empid;
+		}
+		string getName(){
+			return name;
+		}
+		int getSal(){
+			return sal;
+		}
+		string getRol(){
+			return role;
+		}
+};
 int main()
 {
 	fstream fin;
+	int buf;
 	char chr[]= "5 abcm 2500 fr\n6 xyz 1500 HR";
 	string num,T;
 	int j=0;
