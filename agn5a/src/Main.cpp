@@ -19,10 +19,10 @@ public:
 	{
 		return count;
 	};
-	char *getMaxWord(int pos)
-	{
-		return words[pos];
-	}
+//	char *getMaxWord(int pos)
+//	{
+//		return words[pos];
+//	}
 	void setWords(char *line)
 	{
 		char *tokens=strtok(line," ");
@@ -58,21 +58,21 @@ public:
 		return false;
 	}
 
-	int getMaxWords()
-	{
-		int max=strlen(words[0]);
-		int pos =0;
-		for(int i=1;i<count;i++)
-		{
-			if(max<strlen(words[i]))
-			{
-				max=strlen(words[i]);
-				pos=i;
-				cout<<"POS: "<<pos<<endl;
-			}
-		}
-		return pos;
-	}
+//	int getMaxWords()
+//	{
+//		int max=strlen(words[0]);
+//		int pos =0;
+//		for(int i=1;i<count;i++)
+//		{
+//			if(max<strlen(words[i]))
+//			{
+//				max=strlen(words[i]);
+//				pos=i;
+//				cout<<"POS: "<<pos<<endl;
+//			}
+//		}
+//		return pos;
+//	}
 };
 
 int main()
@@ -84,7 +84,7 @@ int main()
 	ws.setWords((char *)line.c_str());
 	ws.dispWords();
 
-	cout<<"Max of all words are: "<<ws.getMaxWord(ws.getMaxWords())<<endl;
+//	cout<<"Max of all words are: "<<ws.getMaxWord(ws.getMaxWords())<<endl;
 	cout<<"\nEnter the word to be search: "<<endl;
 	string key;
 	cin>>key;
